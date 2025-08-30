@@ -13,6 +13,13 @@ void FixFilePath(char  *filename);
 int FindDistance3D(int ix, int iy, int iz);
 void Shutdown(void);
 
+#ifdef _WIN32
+#   include "../../Engine/src/windows/inttypes.h"
+#else
+#   include <stdint.h>
+#   include <inttypes.h>
+#endif
+
 #ifndef LITTLE_ENDIAN
     #ifdef __APPLE__
     #else
@@ -58,8 +65,42 @@ void Shutdown(void);
 #define Swapint32_t IntelLong
 #endif
 
-int32_t MotoLong (int32_t l);
-int32_t IntelLong (int32_t l);
+// ---- Inline endian shims ----
+#if defined(_MSC_VER)
+#  include <intrin.h>
+#  pragma intrinsic(_byteswap_ushort, _byteswap_ulong)
+#endif
+
+static inline int16_t IntelShort(int16_t x);
+//static inline int32_t IntelLong (int32_t  x);
+
+static inline int16_t MotoShort(int16_t x); 
+
+static inline int32_t MotoLong(int32_t x);
+
+// Map the project’s macros to the helpers above.
+#if (BYTE_ORDER == LITTLE_ENDIAN)
+#  define KeepShort    IntelShort
+#  define SwapShort    MotoShort
+#  define Keepint32_t  IntelLong   /* keeping original macro names */
+#  define Swapint32_t  MotoLong
+#else
+#  define KeepShort    MotoShort
+#  define SwapShort    IntelShort
+#  define Keepint32_t  MotoLong
+#  define Swapint32_t  IntelLong
+#endif
+
+// (Optional) saner aliases — won’t break existing code.
+#ifndef KeepLong
+#  define KeepLong IntelLong
+#endif
+#ifndef SwapLong
+#  define SwapLong MotoLong
+#endif
+
+// int32_t MotoLong (int32_t l);
+// int32_t IntelLong (int32_t l);
 
 void Error (int errorType, char  *error, ...);
 

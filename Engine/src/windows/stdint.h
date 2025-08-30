@@ -29,6 +29,14 @@
 // 
 ///////////////////////////////////////////////////////////////////////////////
 
+#pragma once
+#if defined(_MSC_VER) && _MSC_VER >= 1600
+// VS2010+ already provides <stdint.h>
+#include <stdint.h>
+#else
+/* existing contents of this file remain below for old MSVCs */
+
+
 #ifndef _MSC_VER // [
 #error "Use this header only with Microsoft Visual C++ compilers!"
 #endif // _MSC_VER ]
@@ -245,3 +253,4 @@ typedef uint64_t  uintmax_t;
 
 
 #endif // _MSC_STDINT_H_ ]
+#endif

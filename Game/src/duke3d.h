@@ -47,6 +47,8 @@ Prepared for public release: 03/21/2003 - Charlie Wiederhold, 3D Realms
 #include <time.h>
 #include <ctype.h>
 
+
+
 #include "build.h"
 
 #if (!defined MAX_PATH)

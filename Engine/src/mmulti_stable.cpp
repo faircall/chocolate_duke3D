@@ -1,10 +1,37 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdarg.h>
 
 #include "enet.h"
+// ---- ENet 1.3+ compatibility shim (must come *after* enet.h) ----
+#ifndef enet_time_get_raw
+#define enet_time_get_raw enet_time_get
+#endif
+
+// Wrap the newer 5-arg/4-arg APIs with old call shapes, but only inside this TU.
+static inline ENetHost* enet_host_create_compat(const ENetAddress* addr,
+                                                size_t peerCount,
+                                                enet_uint32 inBW,
+                                                enet_uint32 outBW)
+{
+    // New API: (addr, peerCount, channelLimit, inBW, outBW)
+    return enet_host_create(addr, peerCount, 0, inBW, outBW);
+}
+
+static inline ENetPeer* enet_host_connect_compat(ENetHost* host,
+                                                 const ENetAddress* addr,
+                                                 size_t channelCount)
+{
+    // New API: (host, addr, channelCount, data)
+    return enet_host_connect(host, addr, channelCount, 0);
+}
+
+// Redirect old call sites in this file only (won’t affect the header prototypes).
+#define enet_host_create  enet_host_create_compat
+#define enet_host_connect enet_host_connect_compat
+// ---------------------------------------------------------------
+
 
 //#include "buildqueue.h"
 

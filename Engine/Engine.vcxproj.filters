@@ -23,30 +23,6 @@
     <ClCompile Include="src\mmulti_stable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\enet\host.c">
-      <Filter>enet</Filter>
-    </ClCompile>
-    <ClCompile Include="src\enet\list.c">
-      <Filter>enet</Filter>
-    </ClCompile>
-    <ClCompile Include="src\enet\memory.c">
-      <Filter>enet</Filter>
-    </ClCompile>
-    <ClCompile Include="src\enet\packet.c">
-      <Filter>enet</Filter>
-    </ClCompile>
-    <ClCompile Include="src\enet\peer.c">
-      <Filter>enet</Filter>
-    </ClCompile>
-    <ClCompile Include="src\enet\protocol.c">
-      <Filter>enet</Filter>
-    </ClCompile>
-    <ClCompile Include="src\enet\unix.c">
-      <Filter>enet</Filter>
-    </ClCompile>
-    <ClCompile Include="src\enet\win32.c">
-      <Filter>enet</Filter>
-    </ClCompile>
     <ClCompile Include="src\cache.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -66,6 +42,30 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\fixedPoint_math.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\enet\callbacks.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\enet\compress.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\enet\host.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\enet\list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\enet\packet.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\enet\peer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\enet\protocol.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\enet\win32.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
