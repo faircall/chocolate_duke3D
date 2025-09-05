@@ -3563,7 +3563,7 @@ else
 
             c = 320>>1;
 
-            gametext(c,90,"Are you sure you want to quit?",0,2+8+16);
+            gametext(c,90,"Are you sure Coop wants to quit?",0,2+8+16);
             gametext(c,99,"(Y/N)",0,2+8+16);
 
 			_handle_events();

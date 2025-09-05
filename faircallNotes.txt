@@ -1,0 +1,27 @@
+Managed to get Fabien Sanglard's Choclate Duke Nukem 3D compiling.
+
+I think this is the first time I've actually managed to get a somewhat legacy C codebase compiling and running on Windows (I 
+
+I've always hated this aspect of working with C and C++ codebases- the amount of hoop jumping and bureacratic form-filling involved is a giant pain in the ass,
+and the worst part is I do it so infrequently that I almost never spend enough consistent time with it to learn much. 
+
+The term I've heard for this kind of project setup drudgery is yak-shaving, but that is far too rosy a term for it.
+
+I don't think there's enough knowledge out there on this aspect of software development. I hesitate to call it 'programming', because it's not really programming. 
+But it's definitely programming adjacent and not trivial.
+
+It was interesting to see how useful/useless LLMs were in the process. I would say on the balance it was helpful, although 
+it's still the case that you need to be guiding them so much constantly that quite a bit programming knowledge and intuition was necessary
+to actually get it compiling. Knowing when to completely ignore a suggestion and offer a more direct route.
+
+So what was needed to get it running?
+
+----
+
+
+----
+
+Thoughts on the game
+
+I think games of this era are more enjoyable when played with a keyboard! They're more challenging that way, for one thing. 
+I also don't think mouselook makes sense for these games. It spoils the sprites, for one thing.

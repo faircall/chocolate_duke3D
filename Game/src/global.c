@@ -107,7 +107,7 @@ char level_names[44][33];
 char level_file_names[44][128];
 int32_t partime[44],designertime[44];
 char  volume_names[4][33] = { "L.A. MELTDOWN", "LUNAR APOCALYPSE", "SHRAPNEL CITY", "" }; // Names are not in 1.3 con files. MUST be in code.
-char  skill_names[5][33] = { "PIECE OF CAKE", "LET'S ROCK", "COME GET SOME", "DAMN I'M GOOD", "" };
+char  skill_names[5][33] = { "PIECE OF COOP", "LET'S COOP", "COOP GET SOME", "DAMN I'M COOP", "" };
 
 volatile int32_t checksume;
 int32_t soundsiz[NUM_SOUNDS];

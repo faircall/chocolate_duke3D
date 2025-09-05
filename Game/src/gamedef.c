@@ -1172,7 +1172,7 @@ uint8_t  parsecommand(int readfromGRP)
 
             while( *textptr != 0x0a )
             {
-                skill_names[j][i] = toupper(*textptr);
+                //skill_names[j][i] = toupper(*textptr);
                 textptr++,i++;
                 if(i >= 32)
                 {
@@ -1185,7 +1185,7 @@ uint8_t  parsecommand(int readfromGRP)
 #ifdef PLATFORM_UNIX
             skill_names[j][i] = '\0';
 #else
-            skill_names[j][i-1] = '\0';
+            //skill_names[j][i-1] = '\0';
 #endif
             return 0;
 
